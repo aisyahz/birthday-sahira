@@ -52,6 +52,13 @@
             left: 50%;
             transform: translate(-50%, -50%);
             animation: slideIn 1s ease-out;
+            margin-bottom: 20px; /* Added margin-bottom to create space */
+        }
+
+        .control-panel {
+            position: fixed;
+            bottom: 20px; /* Adjusted bottom margin for space */
+            padding: 10px 0px 10px 0px;
         }
 
         /* Button styles */
@@ -75,7 +82,6 @@
         }
     </style>
 </head>
-
 <body>
 <div class="loading"></div>
 <audio class="song" controls loop>
@@ -83,7 +89,9 @@
     Your browser isn't invited for super fun audio time.
 </audio>
 <div class="birthday-message">
-    Hey Sahira, Today is going to be a special day for you , Please Check This Out . Just Follow the button below ! 🎉
+    <p></p>
+   <p>Hey Sahira,Today is a special day </p> 
+   <p>Please Follow the button ! 🎉</p>
 </div>
 <div class="balloons text-center" id="b1">
     <h2 style="color:#F2B300;"></h2>
@@ -109,39 +117,14 @@
 
 <img src="assets/Balloon-Border.png" width="100%" class="balloon-border">
 
-
 <div class="container">
-
-    <div class="row">
-        <div class="col-md-2 col-xs-2 bulb-holder">
-            <div class="bulb" id="bulb_yellow"></div>
-        </div>
-        <div class="col-md-2 col-xs-2 bulb-holder">
-            <div class="bulb" id="bulb_red"></div>
-        </div>
-        <div class="col-md-2 col-xs-2 bulb-holder">
-            <div class="bulb" id="bulb_blue"></div>
-        </div>
-        <div class="col-md-2 col-xs-2 bulb-holder">
-            <div class="bulb" id="bulb_green"></div>
-        </div>
-        <div class="col-md-2 col-xs-2 bulb-holder">
-            <div class="bulb" id="bulb_pink"></div>
-        </div>
-        <div class="col-md-2 col-xs-2 bulb-holder">
-            <div class="bulb" id="bulb_orange"></div>
-        </div>
-    </div>
     <div class="row">
         <div class="col-md-12 text-center">
             <img src="assets/banner.png" class="bannar">
         </div>
     </div>
-    <!-- <div class="row message">
-        <div class="col-md-12"><p>Khushbu</p></div>
-    </div> -->
     <div class="row cake-cover">
-        <div class="col-md-12 texr-center">
+        <div class="col-md-12 text-center">
             <div class="cake">
                 <div class="velas">
                     <div class="fuego"></div>
@@ -159,29 +142,29 @@
         <div class="col-md-12" id="texts-container">
         </div>
     </div>
-    <div class="navbar navbar-fixed-bottom">
-        <div class="row">
-            <div class="col-md-6 text-center col-md-offset-3">
-                <button class="btn btn-black" id="turn_on">Turn On Lights</button>
-                <button class="btn btn-black" id="play">Play Music</button>
-                <button class="btn btn-black" id="bannar_coming">Let's Decorate</button>
-                <button class="btn btn-black" id="balloons_flying">Fly With Balloons</button>
-                <button class="btn btn-black" id="cake_fadein">Most Delicious Cake Ever</button>
-                <button class="btn btn-black" id="light_candle"> Light Candle</button>
-                <button class="btn btn-black" id="wish_message">Happy Birthday</button>
-                <button class="btn btn-black" id="story">A mesage for you</button>
-                <!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
-            </div>
+</div>
+
+<!-- Buttons are placed here after the birthday message -->
+<div class="navbar navbar-fixed-bottom">
+    <div class="row">
+        <div class="col-md-6 text-center col-md-offset-3">
+            <button class="btn btn-black" id="turn_on">Turn On Lights</button>
+            <button class="btn btn-black" id="play">Play Music</button>
+            <button class="btn btn-black" id="bannar_coming">Let's Decorate</button>
+            <button class="btn btn-black" id="balloons_flying">Fly With Balloons</button>
+            <button class="btn btn-black" id="cake_fadein">Most Delicious Cake Ever</button>
+            <button class="btn btn-black" id="light_candle"> Light Candle</button>
+            <button class="btn btn-black" id="wish_message">Happy Birthday</button>
+            <button class="btn btn-black" id="story">A message for you</button>
+            <!-- <button class="btn btn-primary" id="cake_cut">Let's Cut the Cake</button> -->
         </div>
     </div>
-
-
 </div>
-</body>
+
+<!-- Scripts and additional content below -->
 <script src="assets/jquery.min.js"></script>
 <script src="./assets/bootstrap.min.js"></script>
 <script src="assets/effect.js"></script>
-
 <script src="custom.js"></script>
-
+</body>
 </html>

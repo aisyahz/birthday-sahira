@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Happy Birthday</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Happy Birthday">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="assets/loading.css">
+    <link rel="stylesheet/less" href="assets/cake.less">
+    <script src="assets/less.min.js"></script>
+    <script src="config.js"></script>
+    <style>
+        /* Additional styles for responsiveness */
+        @media (max-width: 767px) {
+            /* Adjustments for small screens */
+            .bulb-holder {
+                text-align: center;
+            }
+            .bulb {
+                display: inline-block;
+            }
+            .bannar {
+                width: 100%;
+                height: auto;
+            }
+            .cake-cover {
+                margin-top: 20px;
+            }
+            .navbar {
+                position: static;
+                margin-top: 20px;
+            }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+
+        .birthday-message {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Button styles */
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #000;
+        }
+
+        .btn-black {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-black:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+<div class="loading"></div>
+<audio class="song" controls loop>
+    <source src="assets/hbd.mp3"></source>
+    Your browser isn't invited for super fun audio time.
+</audio>
+<div class="birthday-message">
+    Happy Birthday! 🎉
+</div>
+<div class="balloons text-center" id="b1">
+    <h2 style="color:#F2B300;"></h2>
+</div>
+<div class="balloons text-center" id="b2">
+    <h2 style="color:#0719D4;"></h2>
+</div>
+<div class="balloons text-center" id="b3">
+    <h2 style="color:#D14D39;"></h2>
+</div>
+<div class="balloons text-center" id="b4">
+    <h2 style="color:#8FAD00;"></h2>
+</div>
+<div class="balloons text-center" id="b5">
+    <h2 style="color:#8377E4;"></h2>
+</div>
+<div class="balloons text-center" id="b6">
+    <h2 style="color:#99C96A;"></h2>
+</div>
+<div class="balloons text-center" id="b7">
+    <h2 style="color:#20CFB4;"></h2>
+</div>
+
+<img src="assets/Balloon-Border.png" width="100%" class="balloon-border">
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-2 col-xs-2 bulb-holder">
+            <div class="bulb" id="bulb_yellow"></div>
+        </div>
+        <div class="col-md-2 col-xs-2 bulb-holder">
+            <div class="bulb" id="bulb_red"></div>
+        </div>
+        <div class="col-md-2 col-xs-2 bulb-holder">
+            <div class="bulb" id="bulb_blue"></div>
+        </div>
+        <div class="col-md-2 col-xs-2 bulb-holder">
+            <div class="bulb" id="bulb_green"></div>
+        </div>
+        <div class="col-md-2 col-xs-2 bulb-holder">
+            <div class="bulb" id="bulb_pink"></div>
+        </div>
+        <div class="col-md-2 col-xs-2 bulb-holder">
+            <div class="bulb" id="bulb_orange"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="assets/banner.png" class="bannar">
+        </div>
+    </div>
+    <!-- <div class="row message">
+        <div class="col-md-12"><p>Khushbu</p></div>
+    </div> -->
+    <div class="row cake-cover">
+        <div class="col-md-12 texr-center">
+            <div class="cake">
+                <div class="velas">
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                </div>
+                <div class="cobertura"></div>
+                <div class="bizcocho"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row message">
+        <div class="col-md-12" id="texts-container">
+        </div>
+    </div>
+    <div class="navbar navbar-fixed-bottom">
+        <div class="row">
+            <div class="col-md-6 text-center col-md-offset-3">
+                <button class="btn btn-black" id="turn_on">Turn On Lights</button>
+                <button class="btn btn-black" id="play">Play Music</button>
+                <button class="btn btn-black" id="bannar_coming">Let's Decorate</button>
+                <button class="btn btn-black" id="balloons_flying">Fly With Balloons</button>
+                <button class="btn btn-black" id="cake_fadein">Most Delicious Cake Ever</button>
+                <button class="btn btn-black" id="light_candle"> Light Candle</button>
+                <button class="btn btn-black" id="wish_message">Happy Birthday</button>
+                <button class="btn btn-black" id="story">A mesage for you</button>
+                <!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+<script src="assets/jquery.min.js"></script>
+<script src="./assets/bootstrap.min.js"></script>
+<script src="assets/effect.js"></script>
+
+<script src="custom.js"></script>
+
+</html>
